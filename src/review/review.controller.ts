@@ -35,11 +35,12 @@ export class ReviewController {
       throw new HttpException(REVIEW_NOT_FOUND, HttpStatus.NOT_FOUND);
     }
   }
-  // пример кастомного декоратора
+
   // @UseGuards(JwtAuthGuard)
   @Get('byProduct/:productId')
   async getByProduct(
     @Param('productId', IdValidationPipe) productId: string,
+    // пример кастомного декоратора
     // @UserEmail() email: string,
   ) {
     // console.log('444', email);
