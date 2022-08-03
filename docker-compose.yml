@@ -12,3 +12,22 @@ services:
     volumes:
       - ./mongo-data:/data/db
     command: --wiredTigerCacheSizeGB 1.5
+
+#    run production mode in docker
+#    networks:
+#      - one-network
+#
+#  nestjs-api:
+#    image: nestjs:latest
+#    container_name: nestjs-api
+#    restart: always
+#    ports:
+#      - "3000:3000"
+#    volumes:
+#      - ./.env:/opt/app/.env
+#    networks:
+#      - one-network
+#
+#networks:
+#  one-network:
+#    driver: bridge

@@ -1,6 +1,7 @@
 import { ConfigService } from '@nestjs/config';
 import { TypegooseModuleOptions } from 'nestjs-typegoose';
 
+// for run in docker needs 'mongo' host
 const getMongoString = (configService: ConfigService) =>
   'mongodb://' +
   configService.get('MONGO_LOGIN') +
